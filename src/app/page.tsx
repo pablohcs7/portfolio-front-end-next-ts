@@ -12,7 +12,9 @@ export default function Home() {
 					<Header />
 				</header>
 				<main>
-					<HomeContent />
+					<Box mt={"2rem"}>
+						<HomeContent />
+					</Box>
 				</main>
 			</Box>
 		</main>
