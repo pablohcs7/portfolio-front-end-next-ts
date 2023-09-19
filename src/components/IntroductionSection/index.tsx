@@ -1,5 +1,7 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import { StackTypewriter } from "./StackTypewriter";
+import { HomeImageContainer } from "../HomeImageContainer";
+import { CurrentlyWorking } from "../CurrentlyWorking";
 
 interface IntroductionSectionProps {}
 
@@ -19,9 +21,19 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = () => {
 					</Text>
 					<StackTypewriter />
 				</Box>
-				<Text mt={'1.625rem'} fontFamily={'base'} fontSize={'md'} color={'customGray'}>
-					Ele constrói sites e aplicações tanto web quanto mobile prezando pelo design, intuitividade e performance.
+				<Text
+					mt={"1.625rem"}
+					fontFamily={"base"}
+					fontSize={"md"}
+					color={"secondary"}
+				>
+					Ele constrói sites e aplicações tanto web quanto mobile prezando pelo
+					design, intuitividade e performance.
 				</Text>
+				<Flex flexDir={'column'} alignItems={'center'}>
+					<HomeImageContainer />
+					<CurrentlyWorking />
+				</Flex>
 			</Box>
 		</>
 	);

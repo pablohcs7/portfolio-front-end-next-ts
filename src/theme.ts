@@ -22,7 +22,7 @@ export const theme = extendTheme({
 	},
 	colors: {
 		primary: '#C778DD',
-		customGray: '#ABB2BF',
+		secondary: '#ABB2BF',
 		customBackground: '#282C33',
 	},
 	fontWeights: {
