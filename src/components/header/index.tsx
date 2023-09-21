@@ -1,9 +1,14 @@
 import { Box, Flex, IconButton, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import { HeaderMenu } from "../HeaderMenu";
+import { useState } from "react";
 
 interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = () => {
+	const [isOpen, setOpen] = useState(false)
+	console.log(isOpen)
+
 	return (
 		<>
 			<Flex align={"center"} justify={"space-between"} padding={"16px"}>
@@ -19,21 +24,7 @@ export const Header: React.FC<HeaderProps> = () => {
 						Pablo
 					</Text>
 				</Flex>
-				<IconButton
-					aria-label="Menu"
-					icon={
-						<Image
-							alt="Ícone menu"
-							src="/icons/MenuIcon.svg"
-							width="24"
-							height="24"
-						/>
-					}
-					variant={"link"}
-					onClick={() => {
-						console.log("menuOpen");
-					}}
-				/>
+				<HeaderMenu setOpen={setOpen}/>
 			</Flex>
 		</>
 	);
