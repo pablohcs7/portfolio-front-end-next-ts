@@ -3,7 +3,10 @@ import '@fontsource-variable/fira-code';
 
 export const theme = extendTheme({
 	fonts: {
-		base: "Fira Code Variable, sans-serif"
+		base: "Fira Code Variable, sans-serif",
+		body: "Fira Code Variable, sans-serif",
+    heading: "Fira Code Variable, sans-serif",
+    mono: "Fira Code Variable, sans-serif",
 	},
 	fontSizes: {
 		xs: "0.75rem",
@@ -63,6 +66,16 @@ export const theme = extendTheme({
 			"2xl": "1rem",
 			"3xl": "1.5rem",
 			full: "9999px"
+		}
+	},
+
+	components: {
+		Button: {
+			baseStyle: {
+				_focus: {
+					boxShadow: 'none !important',
+				}
+			}
 		}
 	}
 });
