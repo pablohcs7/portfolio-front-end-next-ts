@@ -11,7 +11,7 @@ export const Header: React.FC<HeaderProps> = () => {
 
 	return (
 		<>
-			<Flex align={"center"} justify={"space-between"} padding={"16px"}>
+			<Flex align={"center"} justify={"space-between"} padding={"1rem"}>
 				<Flex align={"center"}>
 					<Image alt="Logo" src="/logo/logo_white.svg" width="16" height="16" />
 					<Text

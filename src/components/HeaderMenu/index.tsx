@@ -1,27 +1,23 @@
 import {
-	Box,
-	Button,
 	IconButton,
-	Menu,
-	MenuButton,
-	MenuItem,
-	MenuList,
+	Image,
+	List,
+	ListItem,
 	Modal,
 	ModalBody,
-	ModalCloseButton,
 	ModalContent,
 	ModalFooter,
-	ModalHeader,
 	ModalOverlay,
-	useDisclosure
+	useDisclosure,
+	Text,
+	Flex
 } from "@chakra-ui/react";
-import { Divide as Hamburger } from "hamburger-react";
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 import { Header } from "../Header";
+import { HeaderMenuItem } from "../HeaderMenuItem";
 
 interface HeaderMenuProps {
 	setOpen: Dispatch<SetStateAction<boolean>>;
-	// isOpen: boolean;
 }
 
 export const HeaderMenu: React.FC<HeaderMenuProps> = ({ setOpen }) => {
@@ -29,52 +25,30 @@ export const HeaderMenu: React.FC<HeaderMenuProps> = ({ setOpen }) => {
 
 	return (
 		<>
-			{/* <Menu>
-				{({ isOpen }) => (
-					<>
-						<MenuButton
-							isActive={isOpen}
-							as={IconButton}
-              border={'none'}
-							colorScheme={"customBackground"}
-							variant={"outline"}
-							icon={
-								<Hamburger
-									size={24}
-									color="#FFF"
-									toggled={isOpen}
-									toggle={setOpen}
-								/>
-							}
-						/>
-						<MenuList width={'100vw'} height={'calc(100vh - 72px)'} zIndex={999}>
-							<MenuItem>home</MenuItem>
-							<MenuItem>trabalhos</MenuItem>
-							<MenuItem>sobre mim</MenuItem>
-							<MenuItem>contatos</MenuItem>
-						</MenuList>
-					</>
-				)}
-			</Menu> */}
-
 			<IconButton
 				aria-label="Menu"
-        border={'none'}
-        colorScheme={"customBackground"}
-        onClick={onOpen}
-				icon={
-					<Hamburger size={24} color="#FFF" toggled={isOpen} toggle={setOpen} />
-				}
+				border={"none"}
+				colorScheme={"customBackground"}
+				onClick={onOpen}
+				icon={<Image src={"/icons/MenuIcon.svg"} boxSize={"24px"} />}
 			/>
 
 			<Modal isOpen={isOpen} onClose={onClose} size={"full"}>
 				<ModalOverlay />
-				<ModalContent backgroundColor={'customBackground'}>
+				<ModalContent backgroundColor={"customBackground"}>
 					<Header />
-					<ModalBody>Teste</ModalBody>
+					<ModalBody mt={"3rem"}>
+						<List>
+							<Flex flexDir={"column"} gap={'2rem'}>
+								<HeaderMenuItem optionLink="/teste" optionName="home" />
+								<HeaderMenuItem optionLink="/teste" optionName="trabalhos" />
+								<HeaderMenuItem optionLink="/teste" optionName="sobre mim" />
+								<HeaderMenuItem optionLink="/teste" optionName="contatos" />
+							</Flex>
+						</List>
+					</ModalBody>
 
-					<ModalFooter>
-					</ModalFooter>
+					<ModalFooter></ModalFooter>
 				</ModalContent>
 			</Modal>
 		</>
