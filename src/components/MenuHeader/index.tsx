@@ -2,25 +2,20 @@ import {
 	IconButton,
 	Image,
 	List,
-	ListItem,
 	Modal,
 	ModalBody,
 	ModalContent,
 	ModalFooter,
 	ModalOverlay,
 	useDisclosure,
-	Text,
 	Flex
 } from "@chakra-ui/react";
-import { Dispatch, SetStateAction } from "react";
-import { Header } from "../Header";
-import { HeaderMenuItem } from "../HeaderMenuItem";
+import { MenuHeaderItem } from "../MenuHeaderItem";
+import { HeaderModal } from "../HeaderModal/Index";
 
-interface HeaderMenuProps {
-	setOpen: Dispatch<SetStateAction<boolean>>;
-}
+interface HeaderMenuProps {}
 
-export const HeaderMenu: React.FC<HeaderMenuProps> = ({ setOpen }) => {
+export const MenuHeader: React.FC<HeaderMenuProps> = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 
 	return (
@@ -36,14 +31,17 @@ export const HeaderMenu: React.FC<HeaderMenuProps> = ({ setOpen }) => {
 			<Modal isOpen={isOpen} onClose={onClose} size={"full"}>
 				<ModalOverlay />
 				<ModalContent backgroundColor={"customBackground"}>
-					<Header />
+					<HeaderModal closeMenu={onClose} />
 					<ModalBody mt={"3rem"}>
 						<List>
-							<Flex flexDir={"column"} gap={'2rem'}>
-								<HeaderMenuItem optionLink="/teste" optionName="home" />
-								<HeaderMenuItem optionLink="/teste" optionName="trabalhos" />
-								<HeaderMenuItem optionLink="/teste" optionName="sobre mim" />
-								<HeaderMenuItem optionLink="/teste" optionName="contatos" />
+							<Flex flexDir={"column"} gap={"2rem"}>
+								<MenuHeaderItem optionLink="/" optionName="home" />
+								<MenuHeaderItem
+									optionLink="/trabalhos"
+									optionName="trabalhos"
+								/>
+								<MenuHeaderItem optionLink="/sobre" optionName="sobre mim" />
+								<MenuHeaderItem optionLink="/contatos" optionName="contatos" />
 							</Flex>
 						</List>
 					</ModalBody>
