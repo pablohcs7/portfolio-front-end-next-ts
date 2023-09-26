@@ -8,7 +8,8 @@ import {
 	ModalFooter,
 	ModalOverlay,
 	useDisclosure,
-	Flex
+	Flex,
+	ListItem
 } from "@chakra-ui/react";
 import { MenuHeaderItem } from "../MenuHeaderItem";
 import { HeaderModal } from "../HeaderModal/Index";
@@ -35,18 +36,24 @@ export const MenuHeader: React.FC<HeaderMenuProps> = () => {
 					<ModalBody mt={"3rem"}>
 						<List>
 							<Flex flexDir={"column"} gap={"2rem"}>
-								<MenuHeaderItem optionLink="/" optionName="home" />
-								<MenuHeaderItem
-									optionLink="/trabalhos"
-									optionName="trabalhos"
-								/>
-								<MenuHeaderItem optionLink="/sobre" optionName="sobre mim" />
-								<MenuHeaderItem optionLink="/contatos" optionName="contatos" />
+								<ListItem>
+									<MenuHeaderItem optionLink="/" optionName="home" />
+								</ListItem>
+								<ListItem>
+									<MenuHeaderItem optionLink="/projects" optionName="projetos" />
+								</ListItem>
+								<ListItem>
+									<MenuHeaderItem optionLink="/about" optionName="sobre mim" />
+								</ListItem>
+								<ListItem>
+									<MenuHeaderItem
+										optionLink="/contacts"
+										optionName="contatos"
+									/>
+								</ListItem>
 							</Flex>
 						</List>
 					</ModalBody>
-
-					<ModalFooter></ModalFooter>
 				</ModalContent>
 			</Modal>
 		</>
