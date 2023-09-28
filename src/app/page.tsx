@@ -1,12 +1,12 @@
 "use client";
 
-import { Box, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { Header } from "@/components/Header";
 import { HomeContent } from "@/components/HomeContent";
 
 export default function Home() {
 	return (
-		<main>
+		<>
 			<Box bgColor={"customBackground"} minW={"100vw"} minH={"100vh"}>
 				<header>
 					<Header />
@@ -16,7 +16,8 @@ export default function Home() {
 						<HomeContent />
 					</Box>
 				</main>
+				<footer><Box w={'100%'} h={'200px'}></Box></footer>
 			</Box>
-		</main>
+		</>
 	);
 }
