@@ -27,6 +27,11 @@ export const theme = extendTheme({
 		primary: '#C778DD',
 		secondary: '#ABB2BF',
 		customBackground: '#282C33',
+		chakra: {
+			body: {
+				text:'#FFF !important'
+			}
+		}
 	},
 	fontWeights: {
 		hairline: 100,
