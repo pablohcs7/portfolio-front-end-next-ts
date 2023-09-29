@@ -73,7 +73,6 @@ export const theme = extendTheme({
 			full: "9999px"
 		}
 	},
-
 	components: {
 		Button: {
 			baseStyle: {
@@ -82,5 +81,5 @@ export const theme = extendTheme({
 				}
 			}
 		}
-	}
+	},
 });

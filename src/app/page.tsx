@@ -7,7 +7,7 @@ import { HomeContent } from "@/components/HomeContent";
 export default function Home() {
 	return (
 		<>
-			<Box bgColor={"customBackground"} minW={"100vw"} minH={"100vh"}>
+			<Box bgColor={"customBackground"} minH={"100vh"}>
 				<header>
 					<Header />
 				</header>
