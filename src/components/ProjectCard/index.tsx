@@ -1,8 +1,6 @@
 import {
 	Box,
-	Button,
 	Card,
-	CardBody,
 	CardFooter,
 	CardHeader,
 	Divider,
@@ -12,57 +10,80 @@ import {
 import ChakraNextImage from "../ChakraNextImage";
 import { CardButton } from "../CardButton";
 
-interface ProjectCardProps {}
+interface ProjectCardProps {
+	title: string;
+	description: string;
+	techs: string[];
+	urlProduction: string;
+	urlRepo: string;
+	image: string;
+}
 
-export const ProjectCard: React.FC<ProjectCardProps> = () => {
+export const ProjectCard: React.FC<ProjectCardProps> = ({
+	title,
+	description,
+	techs,
+	urlProduction,
+	urlRepo,
+	image
+}) => {
 	return (
 		<>
-			<Card
-				w={"17.25rem"}
-				height={'19.625rem'}
-				border={"1px solid"}
-				borderColor={"secondary"}
-				bgColor={"customBackground"}
-				borderRadius={"0"}
-			>
-				<CardHeader p={"0"} border={"none"}>
-					<Box>
-						<ChakraNextImage
-							src={"/images/cinexile_logo.png"}
-							alt={"Card Image"}
-							width={"250"}
-							height={"250"}
-							w={"100%"}
-							h={"132px"}
-							objectFit={'cover'}
-						/>
-					</Box>
-					<Divider color={"secondary"} />
-				</CardHeader>
-				<Flex flexDir={"column"} p={"0"} border={"none"}>
-					<Flex padding={"6px"} gap={"6px"}>
-						<Text color={"secondary"}>HTML</Text>
-						<Text color={"secondary"}>CSS</Text>
-						<Text color={"secondary"}>JS</Text>
-						<Text color={"secondary"}>TS</Text>
+				<Card
+					w={"17.25rem"}
+					height={"19.625rem"}
+					border={"1px solid"}
+					borderColor={"secondary"}
+					bgColor={"customBackground"}
+					borderRadius={"0"}
+				>
+					<CardHeader p={"0"} border={"none"}>
+						<Box>
+							<ChakraNextImage
+								src={image}
+								alt={"An image about the project"}
+								width={"250"}
+								height={"250"}
+								w={"100%"}
+								h={"132px"}
+								objectFit={"cover"}
+							/>
+						</Box>
+						<Divider color={"secondary"} />
+					</CardHeader>
+					<Flex flexDir={"column"} p={"0"} border={"none"}>
+						<Flex padding={"6px"} gap={"6px"}>
+							{techs.map((tech, index) => (
+								<Text key={index} color={"secondary"}>
+									{tech}
+								</Text>
+							))}
+						</Flex>
+						<Divider color={"secondary"} />
+						<Flex flexDirection={"column"} padding={"0.875rem"}>
+							<Text fontSize={"1.25rem"} color={"white"}>
+								{title}
+							</Text>
+							<Text mt={"0.875rem"} fontSize={"1rem"} color={"secondary"}>
+								{description}
+							</Text>
+						</Flex>
 					</Flex>
-					<Divider color={"secondary"} />
-					<Flex flexDirection={"column"} padding={"0.875rem"}>
-						<Text fontSize={"1.25rem"} color={"white"}>
-							Cinexile
-						</Text>
-						<Text mt={"0.875rem"} fontSize={"1rem"} color={"secondary"}>
-							Meu primeiro site
-						</Text>
-					</Flex>
-				</Flex>
-				<CardFooter p={"0.875rem"} paddingTop={"0"} border={"none"}>
-					<Flex gap={'0.875rem'} width={'100%'}>
-						<CardButton buttonText="Ver site" iconSrc="/icons/play.svg"/>
-						<CardButton buttonText="Repo" iconSrc="/icons/github.svg"/>
-					</Flex>
-				</CardFooter>
-			</Card>
+					<CardFooter p={"0.875rem"} paddingTop={"0"} border={"none"}>
+						<Flex gap={"0.875rem"} width={"100%"}>
+							<CardButton
+								buttonText="Ver site"
+								iconSrc="/icons/play.svg"
+								url={urlProduction}
+							/>
+							<CardButton
+								buttonText="Repo"
+								iconSrc="/icons/github.svg"
+								url={urlRepo}
+							/>
+						</Flex>
+					</CardFooter>
+				</Card>
 		</>
 	);
 };

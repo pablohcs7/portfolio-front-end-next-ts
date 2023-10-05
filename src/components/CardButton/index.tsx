@@ -4,11 +4,13 @@ import ChakraNextImage from "../ChakraNextImage";
 interface CardButtonProps {
 	buttonText: string;
 	iconSrc: string;
+	url?: string;
 }
 
 export const CardButton: React.FC<CardButtonProps> = ({
 	buttonText,
-	iconSrc
+	iconSrc,
+	url,
 }) => {
 	return (
 		<>
