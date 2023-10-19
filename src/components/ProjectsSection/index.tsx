@@ -29,12 +29,9 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = () => {
 						</Text>
 					</ChakraLink>
 				</Flex>
-				<Flex
-					w={"100%"}
-					mt={"2rem"}
-				>
-						<Carousel />
-					</Flex>
+				<Flex mt={"2rem"}>
+					<Carousel />
+				</Flex>
 			</Flex>
 		</>
 	);

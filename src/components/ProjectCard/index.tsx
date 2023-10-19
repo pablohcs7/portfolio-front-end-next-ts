@@ -10,7 +10,7 @@ import {
 import ChakraNextImage from "../ChakraNextImage";
 import { CardButton } from "../CardButton";
 
-interface ProjectCardProps {
+export interface ProjectCardProps {
 	title: string;
 	description: string;
 	techs: string[];
@@ -30,7 +30,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 	return (
 		<>
 				<Card
-					w={"17.25rem"}
+					w={"16.25rem"}
 					height={"19.625rem"}
 					border={"1px solid"}
 					borderColor={"secondary"}
@@ -64,7 +64,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 							<Text fontSize={"1.25rem"} color={"white"}>
 								{title}
 							</Text>
-							<Text mt={"0.875rem"} fontSize={"1rem"} color={"secondary"}>
+							<Text mt={"0.875rem"} fontSize={"0.8rem"} color={"secondary"}>
 								{description}
 							</Text>
 						</Flex>
