@@ -31,7 +31,7 @@ const projectsInfos: ProjectCardProps[] = [
 		description: "Primeiro site",
 		urlProduction: "https://pablohcs7.github.io/cinexile",
 		urlRepo: "https://github.com/pablohcs7/cinexile"
-	}
+	},
 ];
 
 export const Carousel: React.FC<CarouselProps> = () => {
