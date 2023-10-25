@@ -1,7 +1,9 @@
-import useEmblaCarousel from "embla-carousel-react";
+import useEmblaCarousel, { EmblaCarouselType } from "embla-carousel-react";
 import { ProjectCard, ProjectCardProps } from "../ProjectCard";
-import { Box } from "@chakra-ui/react";
+import { Box, Button, Flex, IconButton, Text } from "@chakra-ui/react";
 import Autoplay from "embla-carousel-autoplay";
+import { useCallback, useEffect, useState } from "react";
+import ChakraNextImage from "../ChakraNextImage";
 
 interface CarouselProps {}
 
@@ -16,7 +18,7 @@ const projectsInfos: ProjectCardProps[] = [
 	},
 	{
 		image: "/images/savemylink_logo.png",
-		techs: ["REACT", "MUI", "EXPRESS", 'PRISMA', "TS"],
+		techs: ["REACT", "MUI", "EXPRESS", "PRISMA", "TS"],
 		title: "SaveMyLink",
 		description: "Primeiro projeto fullstack",
 		urlProduction: "https://save-my-link-web.vercel.app",
@@ -33,26 +35,107 @@ const projectsInfos: ProjectCardProps[] = [
 ];
 
 export const Carousel: React.FC<CarouselProps> = () => {
-	const [emblaRef] = useEmblaCarousel({ loop: false }, [
-		// Autoplay({ stopOnInteraction: false })
+	const [selectedIndex, setSelectedIndex] = useState(0);
+	const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+
+	console.log(selectedIndex);
+
+	const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+		Autoplay({ stopOnInteraction: false })
 	]);
+
+	const scrollPrev = useCallback(
+		() => emblaApi && emblaApi.scrollPrev(),
+		[emblaApi]
+	);
+	const scrollNext = useCallback(
+		() => emblaApi && emblaApi.scrollNext(),
+		[emblaApi]
+	);
+
+	const scrollTo = useCallback(
+		(index: number) => emblaApi && emblaApi.scrollTo(index),
+		[emblaApi]
+	);
+
+	const onInit = useCallback((emblaApi: EmblaCarouselType) => {
+		setScrollSnaps(emblaApi.scrollSnapList());
+	}, []);
+
+	const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
+		setSelectedIndex(emblaApi.selectedScrollSnap());
+	}, []);
+
+	useEffect(() => {
+		if (!emblaApi) return;
+
+		onInit(emblaApi);
+		onSelect(emblaApi);
+		emblaApi.on("reInit", onInit);
+		emblaApi.on("reInit", onSelect);
+		emblaApi.on("select", onSelect);
+	}, [emblaApi, onInit, onSelect]);
 
 	return (
 		<>
 			<Box width={"16.25rem"}>
 				<Box className="embla" ref={emblaRef} overflow={"hidden"}>
-					<Box className="embla__container" display={"flex"} gap={"2rem"}>
+					<Box className="embla__container" display={"flex"}>
 						{projectsInfos.map((projectInfo, index) => (
 							<Box
 								key={index}
 								className="embla__slide"
 								flex={"0 0 100%"}
 								minWidth={"0"}
+								ml={"1rem"}
+								mr={"1rem"}
 							>
 								<ProjectCard {...projectInfo} />
 							</Box>
 						))}
 					</Box>
+					<Flex
+						gap={"0.5rem"}
+						justifyContent={"center"}
+						alignItems={"center"}
+						mt={"0.5rem"}
+					>
+						<Box as={"button"} onClick={scrollPrev}>
+							<Text
+								color={"secondary"}
+								cursor={"pointer"}
+								transition={"0.3s"}
+								_active={{ color: "gray.200" }}
+							>
+								{"<~"}
+							</Text>
+						</Box>
+						<Flex gap={"0.5rem"} justifyContent={"center"}>
+							{projectsInfos.map((projectInfo, index) => (
+								<Button
+									key={index}
+									minWidth={"10px"}
+									height={"10px"}
+									padding={"0"}
+									_hover={{}}
+									backgroundColor={
+										index == selectedIndex ? "primary" : "secondary"
+									}
+									onClick={() => scrollTo(index)}
+								/>
+							))}
+						</Flex>
+						<Box as={"button"} onClick={scrollNext}>
+							<Text
+								color={"secondary"}
+								cursor={"pointer"}
+								transition={"0.3s"}
+								_active={{ color: "gray.200" }}
+							>
+								{"~>"}
+							</Text>
+						</Box>
+					</Flex>
 				</Box>
 			</Box>
 		</>
