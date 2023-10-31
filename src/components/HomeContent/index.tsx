@@ -2,6 +2,7 @@ import { Container, Flex } from "@chakra-ui/react";
 import { IntroductionSection } from "../IntroductionSection";
 import { ProjectsSection } from "../ProjectsSection";
 import { AboutSection } from "../AboutSection";
+import { ContactSection } from "../contactSection";
 
 interface HomeContentProps {}
 
@@ -11,8 +12,9 @@ export const HomeContent: React.FC<HomeContentProps> = () => {
 			<Container>
 				<Flex flexDir={"column"}>
 					<IntroductionSection />
-					<ProjectsSection />
 					<AboutSection />
+					<ProjectsSection />
+					<ContactSection />
 				</Flex>
 			</Container>
 		</>

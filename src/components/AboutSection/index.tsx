@@ -6,7 +6,7 @@ interface AboutSectionProps {}
 export const AboutSection: React.FC<AboutSectionProps> = () => {
 	return (
 		<>
-			<Flex mt={"2rem"} flexDir={"column"}>
+			<Flex mt={"5rem"} flexDir={"column"}>
 				<MenuHeaderItem
 					optionLink="/about"
 					optionName="sobre mim"
