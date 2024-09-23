@@ -2,8 +2,8 @@ import { Container, Flex } from "@chakra-ui/react";
 import { IntroductionSection } from "../IntroductionSection";
 import { ProjectsSection } from "../ProjectsSection";
 import { AboutSection } from "../AboutSection";
-import { ContactSection } from "../ContactSection";
 import { StacksSection } from "../StacksSection";
+import { ContactSection } from "../contactSection";
 
 interface HomeContentProps {}
 
