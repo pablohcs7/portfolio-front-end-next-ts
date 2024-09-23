@@ -1,5 +1,12 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { HtmlIcon } from "../IconsComponents/HtmlIcon";
+import { CssIcon } from "../IconsComponents/CssIcon";
+import { JavascriptIcon } from "../IconsComponents/JavascriptIcon";
+import { TypescriptIcon } from "../IconsComponents/TypescriptIcon";
+import { ReactIcon } from "../IconsComponents/ReactIcon";
+import { NextIcon } from "../IconsComponents/NextIcon";
+import { NodeIcon } from "../IconsComponents/NodeIcon";
+import { NestIcon } from "../IconsComponents/NestIcon";
 
 interface StacksSectionProps {}
 
@@ -18,7 +25,16 @@ export const StacksSection: React.FC<StacksSectionProps> = () => {
 					tecnologias
 				</Text>
 			</Flex>
-			<HtmlIcon boxSize={'2.5rem'} />
+			<Flex>
+				<HtmlIcon boxSize={"2.5rem"} />
+				<CssIcon boxSize={"2.5rem"} />
+				<JavascriptIcon boxSize={"2.5rem"} />
+				<TypescriptIcon boxSize={"2.5rem"} />
+				<ReactIcon boxSize={"2.5rem"} />
+				<NextIcon boxSize={"2.5rem"} />
+				<NodeIcon boxSize={"2.5rem"} />
+				<NestIcon boxSize={"2.5rem"} />
+			</Flex>
 		</>
 	);
 };
