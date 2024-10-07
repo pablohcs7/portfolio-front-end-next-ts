@@ -18,7 +18,7 @@ export const CurrentlyWorking: React.FC<CurrentlyWorkingProps> = () => {
 						Trabalhando Atualmente em:
 					</Text>
 					<Text fontFamily={"base"} color={"white"} fontWeight={"semibold"}>
-						Portfólio
+						RS Solutions
 					</Text>
 				</Flex>
 			</Flex>
