@@ -3,6 +3,7 @@
 import { Box } from "@chakra-ui/react";
 import { Header } from "@/components/Header";
 import { HomeContent } from "@/components/HomeContent";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
 	return (
@@ -16,7 +17,9 @@ export default function Home() {
 						<HomeContent />
 					</Box>
 				</main>
-				<footer><Box w={'100%'} h={'200px'}></Box></footer>
+				<footer>
+					<Footer />
+				</footer>
 			</Box>
 		</>
 	);
