@@ -15,18 +15,15 @@ export const AboutSection: React.FC<AboutSectionProps> = () => {
 				<Text mt={"2rem"}>
 					Olá! 🖖 Sou o Pablo, tenho 24 anos e sou apaixonado por tecnologia
 					desde criança. Estou trilhando minha trajetória como desenvolvedor e
-					estou constantemente buscando aprimorar minhas habilidades nessa área.
-					Atuei como Desenvolvedor Full Stack onde tive a oportunidade
-					de utilizar tecnologias como React.js, Next.js, Node.js, Nest.js, Git,
-					entre outras.
+					no momento atuo como Desenvolvedor Full Stack na RS Solutions usando
+					diariamente tecnologias como React.js, Next.js, Node.js, Nest.js,
+					MongoDB, Git, entre outras.
 				</Text>
 				<br />
 				<Text>
-					Atualmente, estou aberto a novas oportunidades e desafios no mundo da
-					tecnologia. Se você tiver alguma pergunta sobre meu perfil ou como
-					posso contribuir com seu projeto, não hesite em entrar em contato.
-					Estou entusiasmado para conhecer novas pessoas e explorar novos
-					horizontes em minha jornada como desenvolvedor! 😉
+					Estou sempre aberto a novas oportunidades e desafios no mundo da
+					tecnologia, se você tiver alguma pergunta sobre meu perfil não hesite
+					entrar em contato! 😉
 				</Text>
 			</Flex>
 		</>

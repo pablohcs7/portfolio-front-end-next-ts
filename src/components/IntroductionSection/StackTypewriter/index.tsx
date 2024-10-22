@@ -5,7 +5,7 @@ interface StackTypewriterProps {}
 
 export const StackTypewriter: React.FC<StackTypewriterProps> = () => {
 	const [typeEffect] = useTypewriter({
-		words: ["Front-end", "Back-end", "Full-stack"],
+		words: ["Front-end", "Back-end", "Full Stack"],
 		loop: true,
 		typeSpeed: 120,
 		deleteSpeed: 60,

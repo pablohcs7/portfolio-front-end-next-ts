@@ -2,7 +2,7 @@ import { Box, Flex, Link, Text, Tooltip } from "@chakra-ui/react";
 import { MenuHeaderItem } from "../MenuHeaderItem";
 import { DiscordIcon } from "../IconsComponents/DiscordIcon";
 import { LinkedinIcon } from "../IconsComponents/LinkedinIcon";
-import { EmailIcon } from "../IconsComponents/EmailIcon/EmailIcon";
+import { EmailIcon } from "../IconsComponents/EmailIcon";
 
 interface ContactSectionProps {}
 

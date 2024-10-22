@@ -1,5 +1,12 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, Wrap, WrapItem } from "@chakra-ui/react";
 import { HtmlIcon } from "../IconsComponents/HtmlIcon";
+import { CssIcon } from "../IconsComponents/CssIcon";
+import { JavascriptIcon } from "../IconsComponents/JavascriptIcon";
+import { TypescriptIcon } from "../IconsComponents/TypescriptIcon";
+import { ReactIcon } from "../IconsComponents/ReactIcon";
+import { NextIcon } from "../IconsComponents/NextIcon";
+import { NodeIcon } from "../IconsComponents/NodeIcon";
+import { NestIcon } from "../IconsComponents/NestIcon";
 
 interface StacksSectionProps {}
 
@@ -18,7 +25,32 @@ export const StacksSection: React.FC<StacksSectionProps> = () => {
 					tecnologias
 				</Text>
 			</Flex>
-			<HtmlIcon boxSize={'2.5rem'} />
+			<Wrap spacing={"3.5rem"} justify={"center"} mt={"2rem"}>
+				<WrapItem>
+					<HtmlIcon boxSize={"3rem"} />
+				</WrapItem>
+				<WrapItem>
+					<CssIcon boxSize={"3rem"} />
+				</WrapItem>
+				<WrapItem>
+					<JavascriptIcon boxSize={"3rem"} />
+				</WrapItem>
+				<WrapItem>
+					<TypescriptIcon boxSize={"3rem"} />
+				</WrapItem>
+				<WrapItem>
+					<ReactIcon boxSize={"3em"} />
+				</WrapItem>
+				<WrapItem>
+					<NextIcon boxSize={"3rem"} />
+				</WrapItem>
+				<WrapItem>
+					<NodeIcon boxSize={"3rem"} />
+				</WrapItem>
+				<WrapItem>
+					<NestIcon boxSize={"3rem"} />
+				</WrapItem>
+			</Wrap>
 		</>
 	);
 };
