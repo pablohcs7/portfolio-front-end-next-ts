@@ -5,7 +5,6 @@ import {
 	Modal,
 	ModalBody,
 	ModalContent,
-	ModalFooter,
 	ModalOverlay,
 	useDisclosure,
 	Flex,
@@ -26,7 +25,12 @@ export const MenuHeader: React.FC<HeaderMenuProps> = () => {
 				border={"none"}
 				colorScheme={"customBackground"}
 				onClick={onOpen}
-				icon={<Image src={"/icons/MenuIcon.svg"} boxSize={"24px"} />}
+				icon={
+					<Image
+						src={"/icons/MenuIcon.svg"}
+						boxSize={{ base: "24px", md: "32px" }}
+					/>
+				}
 			/>
 
 			<Modal isOpen={isOpen} onClose={onClose} size={"full"}>
@@ -40,7 +44,10 @@ export const MenuHeader: React.FC<HeaderMenuProps> = () => {
 									<MenuHeaderItem optionLink="/" optionName="home" />
 								</ListItem>
 								<ListItem>
-									<MenuHeaderItem optionLink="/projects" optionName="projetos" />
+									<MenuHeaderItem
+										optionLink="/projects"
+										optionName="projetos"
+									/>
 								</ListItem>
 								<ListItem>
 									<MenuHeaderItem optionLink="/about" optionName="sobre mim" />

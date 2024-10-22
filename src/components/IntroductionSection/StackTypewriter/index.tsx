@@ -20,7 +20,7 @@ export const StackTypewriter: React.FC<StackTypewriterProps> = () => {
 				fontFamily={"base"}
 				as={"span"}
 				color={"primary"}
-				fontSize={"2rem"}
+				fontSize={{base: "2rem", md: "2.5rem"}}
 				fontWeight={"semibold"}
 			>
 				{typeEffect}

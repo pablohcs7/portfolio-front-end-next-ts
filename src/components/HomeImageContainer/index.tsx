@@ -5,22 +5,21 @@ interface HomeImageContainerProps {}
 export const HomeImageContainer: React.FC<HomeImageContainerProps> = () => {
 	return (
 		<>
-			<Flex justifyContent={'center'}>
+			<Flex justifyContent={"center"}>
 				<Flex
 					alignItems={"center"}
-					mt={"1.5rem"}
-					width={"316px"}
-					height={"260px"}
+					mt={{ base: "1.5rem", md: "2rem" }}
+					width={{ base: "316px", md: "380px" }}
 				>
 					<Image
-						boxSize={"60px"}
+						boxSize={{base:"60px", md: "80px"}}
 						src="/images/dots.png"
 						zIndex={2}
 						position={"absolute"}
-						ml={"248px"}
-						mt={"130px"}
+						ml={{base: "248px", md: "300px"}}
+						mt={{base: "130px", md: "150px"}}
 					/>
-					<Image src="/images/hacker.png" zIndex={1} />
+					<Image src="/images/hacker.png" zIndex={1} width={"100%"} />
 					<Image
 						boxSize={"100px"}
 						src="/logo/logo_dark.svg"

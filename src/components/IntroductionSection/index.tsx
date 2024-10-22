@@ -14,7 +14,7 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = () => {
 						as={"h2"}
 						fontFamily={"base"}
 						color={"white"}
-						fontSize={"2rem"}
+						fontSize={{ base: "2rem", md: "2.5rem" }}
 						fontWeight={"semibold"}
 					>
 						Pablo é um desenvolvedor web
@@ -24,13 +24,13 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = () => {
 				<Text
 					mt={"1.625rem"}
 					fontFamily={"base"}
-					fontSize={"md"}
+					fontSize={{ base: "md", md: "lg" }}
 					color={"secondary"}
 				>
 					Ele constrói sites e aplicações tanto web quanto mobile prezando pelo
 					design, intuitividade e performance.
 				</Text>
-				<Flex flexDir={'column'} alignItems={'center'}>
+				<Flex flexDir={"column"} alignItems={"center"}>
 					<HomeImageContainer />
 					<CurrentlyWorking />
 				</Flex>
