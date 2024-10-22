@@ -1,9 +1,9 @@
-import useEmblaCarousel, { EmblaCarouselType } from "embla-carousel-react";
+import useEmblaCarousel from "embla-carousel-react";
+import { EmblaCarouselType } from "embla-carousel"
 import { ProjectCard, ProjectCardProps } from "../ProjectCard";
 import { Box, Button, Flex, IconButton, Text } from "@chakra-ui/react";
 import Autoplay from "embla-carousel-autoplay";
 import { useCallback, useEffect, useState } from "react";
-import ChakraNextImage from "../ChakraNextImage";
 
 interface CarouselProps {}
 
