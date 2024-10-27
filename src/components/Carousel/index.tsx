@@ -1,5 +1,5 @@
 import useEmblaCarousel from "embla-carousel-react";
-import { EmblaCarouselType } from "embla-carousel"
+import { EmblaCarouselType } from "embla-carousel";
 import { ProjectCard, ProjectCardProps } from "../ProjectCard";
 import { Box, Button, Flex, IconButton, Text } from "@chakra-ui/react";
 import Autoplay from "embla-carousel-autoplay";
@@ -31,7 +31,7 @@ const projectsInfos: ProjectCardProps[] = [
 		description: "Primeiro site",
 		urlProduction: "https://pablohcs7.github.io/cinexile",
 		urlRepo: "https://github.com/pablohcs7/cinexile"
-	},
+	}
 ];
 
 export const Carousel: React.FC<CarouselProps> = () => {
@@ -78,17 +78,20 @@ export const Carousel: React.FC<CarouselProps> = () => {
 
 	return (
 		<>
-			<Box width={"16.25rem"}>
+			<Box width={{ base: "16.25rem", md: "32rem" }}>
 				<Box className="embla" ref={emblaRef} overflow={"hidden"}>
 					<Box className="embla__container" display={"flex"}>
 						{projectsInfos.map((projectInfo, index) => (
 							<Box
 								key={index}
 								className="embla__slide"
-								flex={"0 0 100%"}
+								justifyContent={"center"}
+								display={{ base: "block", md: "flex" }}
+								alignItems={"center"}
+								flex={{ base: "0 0 100%", md: "0 0 60%" }}
 								minWidth={"0"}
-								ml={"1rem"}
-								mr={"1rem"}
+								ml={{ base: "1rem", md: "unset" }}
+								mr={{ base: "1rem", md: "unset" }}
 							>
 								<ProjectCard {...projectInfo} />
 							</Box>

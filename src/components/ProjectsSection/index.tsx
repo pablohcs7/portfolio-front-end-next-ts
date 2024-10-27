@@ -8,14 +8,21 @@ interface ProjectsSectionProps {}
 export const ProjectsSection: React.FC<ProjectsSectionProps> = () => {
 	return (
 		<>
-			<Flex mt={"5rem"} flexDir={"column"} alignItems={"center"}>
+			<Flex flexDir={"column"} alignItems={"center"}>
 				<Flex w={"100%"} alignItems={"center"} justifyContent={"space-between"}>
-					<MenuHeaderItem
-						optionLink="/projects"
-						optionName="projetos"
-						customColor="white"
-					/>
-					<ChakraLink
+					<Flex mt={"5rem"}>
+						<Text color={"primary"} fontSize={{ base: "2rem", md: "2.5rem" }}>
+							#
+						</Text>
+						<Text
+							fontSize={{ base: "2rem", md: "2.5rem" }}
+							color={"white"}
+							_hover={{ color: "white", transition: "0.5s" }}
+						>
+							projetos
+						</Text>
+					</Flex>
+					{/* <ChakraLink
 						as={Link}
 						href={"/projects"}
 						_hover={{ textDecor: "none" }}
@@ -27,7 +34,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = () => {
 						>
 							Ver todos
 						</Text>
-					</ChakraLink>
+					</ChakraLink> */}
 				</Flex>
 				<Flex mt={"2rem"}>
 					<Carousel />
