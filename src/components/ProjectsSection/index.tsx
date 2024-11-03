@@ -10,7 +10,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = () => {
 		<>
 			<Flex flexDir={"column"} alignItems={"center"}>
 				<Flex w={"100%"} alignItems={"center"} justifyContent={"space-between"}>
-					<Flex mt={"5rem"}>
+					<Flex mt={{ base: "5rem", md: "7rem" }}>
 						<Text color={"primary"} fontSize={{ base: "2rem", md: "2.5rem" }}>
 							#
 						</Text>
@@ -22,19 +22,6 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = () => {
 							projetos
 						</Text>
 					</Flex>
-					{/* <ChakraLink
-						as={Link}
-						href={"/projects"}
-						_hover={{ textDecor: "none" }}
-					>
-						<Text
-							color={"white"}
-							fontSize={"0.7rem"}
-							_hover={{ color: "primary", transition: "0.5s" }}
-						>
-							Ver todos
-						</Text>
-					</ChakraLink> */}
 				</Flex>
 				<Flex mt={"2rem"}>
 					<Carousel />

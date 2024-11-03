@@ -1,12 +1,12 @@
 import { extendTheme } from "@chakra-ui/react";
-import '@fontsource-variable/fira-code';
+import "@fontsource-variable/fira-code";
 
 export const theme = extendTheme({
 	fonts: {
 		base: "Fira Code Variable, sans-serif",
 		body: "Fira Code Variable, sans-serif",
-    heading: "Fira Code Variable, sans-serif",
-    mono: "Fira Code Variable, sans-serif",
+		heading: "Fira Code Variable, sans-serif",
+		mono: "Fira Code Variable, sans-serif"
 	},
 	fontSizes: {
 		xs: "0.75rem",
@@ -24,12 +24,12 @@ export const theme = extendTheme({
 		"9xl": "8rem"
 	},
 	colors: {
-		primary: '#C778DD',
-		secondary: '#ABB2BF',
-		customBackground: '#282C33',
+		primary: "#C778DD",
+		secondary: "#ABB2BF",
+		customBackground: "#282C33",
 		chakra: {
 			body: {
-				text:'#FFF !important'
+				text: "#FFF !important"
 			}
 		}
 	},
@@ -53,12 +53,12 @@ export const theme = extendTheme({
 		widest: "0.1em"
 	},
 	breakpoints: {
-		base: "0em",
-		sm: "30em",
-		md: "48em",
-		lg: "62em",
-		xl: "80em",
-		"2xl": "96em"
+		base: "0rem",
+		sm: "30rem",
+		md: "48rem",
+		lg: "64rem",
+		xl: "80rem",
+		"2xl": "96rem"
 	},
 	borderRadius: {
 		radii: {
@@ -77,9 +77,9 @@ export const theme = extendTheme({
 		Button: {
 			baseStyle: {
 				_focus: {
-					boxShadow: 'none !important',
+					boxShadow: "none !important"
 				}
 			}
 		}
-	},
+	}
 });

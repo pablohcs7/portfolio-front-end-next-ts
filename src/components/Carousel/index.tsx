@@ -78,7 +78,7 @@ export const Carousel: React.FC<CarouselProps> = () => {
 
 	return (
 		<>
-			<Box width={{ base: "16.25rem", md: "32rem" }}>
+			<Box width={{ base: "16.25rem", md: "35rem", lg: "45rem" }}>
 				<Box className="embla" ref={emblaRef} overflow={"hidden"}>
 					<Box className="embla__container" display={"flex"}>
 						{projectsInfos.map((projectInfo, index) => (

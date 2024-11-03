@@ -13,7 +13,7 @@ interface StacksSectionProps {}
 export const StacksSection: React.FC<StacksSectionProps> = () => {
 	return (
 		<>
-			<Flex mt={"5rem"}>
+			<Flex mt={{ sm: "5rem", md: "7rem" }}>
 				<Text color={"primary"} fontSize={{ base: "2rem", md: "2.5rem" }}>
 					#
 				</Text>
@@ -25,30 +25,34 @@ export const StacksSection: React.FC<StacksSectionProps> = () => {
 					tecnologias
 				</Text>
 			</Flex>
-			<Wrap spacing={{base: "3.5rem", md: "7rem"}} justify={"center"} mt={{base: "2rem", md: "3rem"}}>
+			<Wrap
+				spacing={{ base: "3.5rem", md: "7rem" }}
+				justify={"center"}
+				mt={{ base: "2rem", md: "3rem" }}
+			>
 				<WrapItem>
-					<HtmlIcon boxSize={{ base: "3rem", md:"3.5rem" }} />
+					<HtmlIcon boxSize={{ base: "3rem", md: "3.5rem" }} />
 				</WrapItem>
 				<WrapItem>
-					<CssIcon boxSize={{ base: "3rem", md:"3.5rem" }} />
+					<CssIcon boxSize={{ base: "3rem", md: "3.5rem" }} />
 				</WrapItem>
 				<WrapItem>
-					<JavascriptIcon boxSize={{ base: "3rem", md:"3.5rem" }} />
+					<JavascriptIcon boxSize={{ base: "3rem", md: "3.5rem" }} />
 				</WrapItem>
 				<WrapItem>
-					<TypescriptIcon boxSize={{ base: "3rem", md:"3.5rem" }} />
+					<TypescriptIcon boxSize={{ base: "3rem", md: "3.5rem" }} />
 				</WrapItem>
 				<WrapItem>
-					<ReactIcon boxSize={{ base: "3rem", md:"3.5rem" }} />
+					<ReactIcon boxSize={{ base: "3rem", md: "3.5rem" }} />
 				</WrapItem>
 				<WrapItem>
-					<NextIcon boxSize={{ base: "3rem", md:"3.5rem" }} />
+					<NextIcon boxSize={{ base: "3rem", md: "3.5rem" }} />
 				</WrapItem>
 				<WrapItem>
-					<NodeIcon boxSize={{ base: "3rem", md:"3.5rem" }} />
+					<NodeIcon boxSize={{ base: "3rem", md: "3.5rem" }} />
 				</WrapItem>
 				<WrapItem>
-					<NestIcon boxSize={{ base: "3rem", md:"3.5rem" }} />
+					<NestIcon boxSize={{ base: "3rem", md: "3.5rem" }} />
 				</WrapItem>
 			</Wrap>
 		</>

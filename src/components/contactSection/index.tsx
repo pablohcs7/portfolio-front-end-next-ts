@@ -1,5 +1,4 @@
-import { Box, Flex, Link, Text, Tooltip } from "@chakra-ui/react";
-import { MenuHeaderItem } from "../MenuHeaderItem";
+import { Flex, Link, Text, Tooltip } from "@chakra-ui/react";
 import { DiscordIcon } from "../IconsComponents/DiscordIcon";
 import { LinkedinIcon } from "../IconsComponents/LinkedinIcon";
 import { EmailIcon } from "../IconsComponents/EmailIcon";
@@ -16,12 +15,19 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
 	return (
 		<>
 			<Flex flexDirection={"column"} mt={"5rem"}>
-				<MenuHeaderItem
-					optionLink="/contact"
-					optionName="Entre em contato"
-					customColor="white"
-				/>
-				<Text mt={"2rem"}>
+				<Flex>
+					<Text color={"primary"} fontSize={{ base: "2rem", md: "2.5rem" }}>
+						#
+					</Text>
+					<Text
+						fontSize={{ base: "2rem", md: "2.5rem" }}
+						color={"white"}
+						_hover={{ color: "white", transition: "0.5s" }}
+					>
+						entre em contato
+					</Text>
+				</Flex>
+				<Text mt={"2rem"} fontSize={{ base: "1rem", md: "1.2rem" }}>
 					Estou em busca de oportunidades full time. Mas, se tiver alguma
 					proposta ou dúvida, sinta-se à vontade para entrar em contato comigo.
 				</Text>
@@ -38,10 +44,13 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
 							shouldWrapChildren
 							hasArrow
 						>
-							<Link href="https://www.linkedin.com/in/pablohcs7" target="_blank">
+							<Link
+								href="https://www.linkedin.com/in/pablohcs7"
+								target="_blank"
+							>
 								<LinkedinIcon
 									color={"secondary"}
-									boxSize={"2.5rem"}
+									boxSize={{ base: "2.5rem", md: "3.5rem" }}
 									_hover={{
 										color: "primary",
 										transition: "0.5s",
@@ -50,14 +59,18 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
 								/>
 							</Link>
 						</Tooltip>
-						<Text color={"secondary"}>{socialUsers.linkedin}</Text>
+						<Text fontSize={{ base: "1rem", md: "1.2rem" }} color={"secondary"}>
+							{socialUsers.linkedin}
+						</Text>
 					</Flex>
 					<Flex alignItems={"center"}>
 						<Tooltip label={"Copiar"} fontSize={"sm"} shouldWrapChildren>
 							<DiscordIcon
-								onClick={()=> navigator.clipboard.writeText(socialUsers.discord)}
+								onClick={() =>
+									navigator.clipboard.writeText(socialUsers.discord)
+								}
 								color={"secondary"}
-								boxSize={"2.5rem"}
+								boxSize={{ base: "2.5rem", md: "3.5rem" }}
 								_hover={{
 									color: "primary",
 									transition: "0.5s",
@@ -65,7 +78,9 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
 								}}
 							/>
 						</Tooltip>
-						<Text color={"secondary"}>{socialUsers.discord}</Text>
+						<Text fontSize={{ base: "1rem", md: "1.2rem" }} color={"secondary"}>
+							{socialUsers.discord}
+						</Text>
 					</Flex>
 					<Flex alignItems={"center"}>
 						<Tooltip
@@ -75,9 +90,11 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
 							hasArrow
 						>
 							<EmailIcon
-								onClick={()=> {navigator.clipboard.writeText(socialUsers.email), console.warn('teste')}}
+								onClick={() => {
+									navigator.clipboard.writeText(socialUsers.email);
+								}}
 								color={"secondary"}
-								boxSize={"2.5rem"}
+								boxSize={{ base: "2.5rem", md: "3.5rem" }}
 								_hover={{
 									color: "primary",
 									transition: "0.5s",
@@ -85,7 +102,9 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
 								}}
 							/>
 						</Tooltip>
-						<Text color={"secondary"}>{socialUsers.email}</Text>
+						<Text fontSize={{ base: "1rem", md: "1.2rem" }} color={"secondary"}>
+							{socialUsers.email}
+						</Text>
 					</Flex>
 				</Flex>
 			</Flex>

@@ -3,14 +3,14 @@ import { IntroductionSection } from "../IntroductionSection";
 import { ProjectsSection } from "../ProjectsSection";
 import { AboutSection } from "../AboutSection";
 import { StacksSection } from "../StacksSection";
-import { ContactSection } from "../contactSection";
+import { ContactSection } from "../ContactSection";
 
 interface HomeContentProps {}
 
 export const HomeContent: React.FC<HomeContentProps> = () => {
 	return (
 		<>
-			<Container maxW={{base: "60ch", md: "63ch"}}>
+			<Container maxW={{ base: "60ch", md: "xl", lg: "3xl" }}>
 				<Flex flexDir={"column"}>
 					<IntroductionSection />
 					<AboutSection />

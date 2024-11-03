@@ -6,8 +6,8 @@ interface AboutSectionProps {}
 export const AboutSection: React.FC<AboutSectionProps> = () => {
 	return (
 		<>
-			<Flex mt={"5rem"} flexDir={"column"}>
-				<Flex mt={"5rem"}>
+			<Flex mt={{ base: "5rem", md: "7rem" }} flexDir={"column"}>
+				<Flex>
 					<Text color={"primary"} fontSize={{ base: "2rem", md: "2.5rem" }}>
 						#
 					</Text>

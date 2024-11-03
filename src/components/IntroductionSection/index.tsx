@@ -10,26 +10,29 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = () => {
 		<>
 			<Box>
 				<Box>
+					<Box>
+						<Text
+							as={"h2"}
+							fontFamily={"base"}
+							color={"white"}
+							fontSize={{ base: "2rem", md: "2.5rem" }}
+							fontWeight={"semibold"}
+							width={{ lg: "34rem" }}
+						>
+							Pablo é um desenvolvedor web
+						</Text>
+						<StackTypewriter />
+					</Box>
 					<Text
-						as={"h2"}
+						mt={"1.625rem"}
 						fontFamily={"base"}
-						color={"white"}
-						fontSize={{ base: "2rem", md: "2.5rem" }}
-						fontWeight={"semibold"}
+						fontSize={{ base: "1rem", md: "1.2rem" }}
+						color={"secondary"}
 					>
-						Pablo é um desenvolvedor web
+						Ele constrói sites e aplicações tanto web quanto mobile prezando
+						pelo design, intuitividade e performance.
 					</Text>
-					<StackTypewriter />
 				</Box>
-				<Text
-					mt={"1.625rem"}
-					fontFamily={"base"}
-					fontSize={{ base: "md", md: "lg" }}
-					color={"secondary"}
-				>
-					Ele constrói sites e aplicações tanto web quanto mobile prezando pelo
-					design, intuitividade e performance.
-				</Text>
 				<Flex flexDir={"column"} alignItems={"center"}>
 					<HomeImageContainer />
 					<CurrentlyWorking />
