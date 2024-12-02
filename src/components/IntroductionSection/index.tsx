@@ -8,7 +8,7 @@ interface IntroductionSectionProps {}
 export const IntroductionSection: React.FC<IntroductionSectionProps> = () => {
 	return (
 		<>
-			<Box>
+			<Flex display={{ base: "block", xl: "flex" }}>
 				<Box>
 					<Box>
 						<Text
@@ -26,8 +26,9 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = () => {
 					<Text
 						mt={"1.625rem"}
 						fontFamily={"base"}
-						fontSize={{ base: "1rem", md: "1.2rem" }}
+						fontSize={{ base: "md", md: "lg" }}
 						color={"secondary"}
+						width={{ lg: "34rem" }}
 					>
 						Ele constrói sites e aplicações tanto web quanto mobile prezando
 						pelo design, intuitividade e performance.
@@ -37,7 +38,7 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = () => {
 					<HomeImageContainer />
 					<CurrentlyWorking />
 				</Flex>
-			</Box>
+			</Flex>
 		</>
 	);
 };

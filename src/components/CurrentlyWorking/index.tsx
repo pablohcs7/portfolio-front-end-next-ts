@@ -6,14 +6,19 @@ export const CurrentlyWorking: React.FC<CurrentlyWorkingProps> = () => {
 	return (
 		<>
 			<Flex
-				width={{base: "20rem", md: "22rem"}}
+				width={{ base: "20rem", md: "22rem", lg: "26.25rem" }}
 				border={"1px solid"}
 				borderColor={"secondary"}
-				padding={{base:"8px", md: "12px"}}
-        alignItems={'center'}
-				gap={{base:"0", md: "1rem"}}
+				padding={{ base: "8px", md: "12px" }}
+				alignItems={"center"}
+				gap={{ base: "0", md: "1rem" }}
 			>
-				<Box width={"1rem"} height={"1rem"} backgroundColor={"primary"} mr={"0.625rem"}></Box>
+				<Box
+					width={"1rem"}
+					height={"1rem"}
+					backgroundColor={"primary"}
+					mr={"0.625rem"}
+				/>
 				<Flex flexDir={"column"}>
 					<Text fontFamily={"base"} color={"secondary"} fontWeight={"medium"}>
 						Trabalhando Atualmente em:

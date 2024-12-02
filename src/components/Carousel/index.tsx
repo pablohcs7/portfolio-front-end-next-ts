@@ -38,8 +38,6 @@ export const Carousel: React.FC<CarouselProps> = () => {
 	const [selectedIndex, setSelectedIndex] = useState(0);
 	const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
-	console.log(selectedIndex);
-
 	const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
 		Autoplay({ stopOnInteraction: false })
 	]);
@@ -88,7 +86,7 @@ export const Carousel: React.FC<CarouselProps> = () => {
 								justifyContent={"center"}
 								display={{ base: "block", md: "flex" }}
 								alignItems={"center"}
-								flex={{ base: "0 0 100%", md: "0 0 60%" }}
+								flex={{ base: "0 0 100%", md: "0 0 60%", lg: '0 0 50%' }}
 								minWidth={"0"}
 								ml={{ base: "1rem", md: "unset" }}
 								mr={{ base: "1rem", md: "unset" }}
