@@ -10,7 +10,7 @@ interface HomeContentProps {}
 export const HomeContent: React.FC<HomeContentProps> = () => {
 	return (
 		<>
-			<Container maxW={{ base: "60ch", md: "xl", lg: "3xl" }}>
+			<Container maxW={{ base: "60ch", md: "xl", lg: "2xl" }}>
 				<Flex flexDir={"column"}>
 					<IntroductionSection />
 					<AboutSection />

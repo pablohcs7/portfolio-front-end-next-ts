@@ -13,7 +13,7 @@ export default function Home() {
 					<Header />
 				</header>
 				<main>
-					<Box mt={"1.3rem"}>
+					<Box mt={{ base: "1.3rem", lg: "3rem" }}>
 						<HomeContent />
 					</Box>
 				</main>

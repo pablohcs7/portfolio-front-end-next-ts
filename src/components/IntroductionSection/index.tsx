@@ -34,7 +34,7 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = () => {
 						pelo design, intuitividade e performance.
 					</Text>
 				</Box>
-				<Flex flexDir={"column"} alignItems={"center"}>
+				<Flex flexDir={"column"} alignItems={"center"} mt={{ lg: '2rem' }}>
 					<HomeImageContainer />
 					<CurrentlyWorking />
 				</Flex>
