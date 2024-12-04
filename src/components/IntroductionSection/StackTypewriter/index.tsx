@@ -12,8 +12,6 @@ export const StackTypewriter: React.FC<StackTypewriterProps> = () => {
 		delaySpeed: 2000
 	});
 
-	console.log();
-
 	return (
 		<>
 			<Text
