@@ -6,7 +6,7 @@ export const CurrentlyWorking: React.FC<CurrentlyWorkingProps> = () => {
 	return (
 		<>
 			<Flex
-				width={{ base: "20rem", md: "22rem", lg: "26.25rem" }}
+				width={{ base: "20rem", md: "22rem", lg: "26.25rem", xl: "23.75rem" }}
 				border={"1px solid"}
 				borderColor={"secondary"}
 				padding={{ base: "8px", md: "12px" }}

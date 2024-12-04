@@ -6,7 +6,7 @@ interface HeaderProps {}
 export const Header: React.FC<HeaderProps> = () => {
 	return (
 		<>
-			<Container maxW={{ lg: "2xl" }}>
+			<Container maxW={{ lg: "2xl", xl: "4xl" }}>
 				<Flex
 					align={"center"}
 					justify={"space-between"}

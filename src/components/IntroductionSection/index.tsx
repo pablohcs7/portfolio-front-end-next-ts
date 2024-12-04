@@ -8,8 +8,12 @@ interface IntroductionSectionProps {}
 export const IntroductionSection: React.FC<IntroductionSectionProps> = () => {
 	return (
 		<>
-			<Flex display={{ base: "block", xl: "flex" }}>
-				<Box>
+			<Flex
+				display={{ base: "block", xl: "flex" }}
+				alignItems={{ xl: "center" }}
+				justifyContent={"space-between"}
+			>
+				<Box maxW={{ xl: "27rem" }}>
 					<Box>
 						<Text
 							as={"h2"}
@@ -17,7 +21,7 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = () => {
 							color={"white"}
 							fontSize={{ base: "2rem", md: "2.5rem" }}
 							fontWeight={"semibold"}
-							width={{ lg: "34rem" }}
+							width={{ lg: "34rem", xl: "100%" }}
 						>
 							Pablo é um desenvolvedor web
 						</Text>
@@ -28,13 +32,13 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = () => {
 						fontFamily={"base"}
 						fontSize={{ base: "md", md: "lg" }}
 						color={"secondary"}
-						width={{ lg: "34rem" }}
+						width={{ lg: "34rem", xl: "100%" }}
 					>
 						Ele constrói sites e aplicações tanto web quanto mobile prezando
 						pelo design, intuitividade e performance.
 					</Text>
 				</Box>
-				<Flex flexDir={"column"} alignItems={"center"} mt={{ lg: '2rem' }}>
+				<Flex flexDir={"column"} alignItems={"center"} mt={{ lg: "2rem" }}>
 					<HomeImageContainer />
 					<CurrentlyWorking />
 				</Flex>

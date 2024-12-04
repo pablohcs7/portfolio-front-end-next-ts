@@ -9,10 +9,10 @@ export const StackTypewriter: React.FC<StackTypewriterProps> = () => {
 		loop: true,
 		typeSpeed: 120,
 		deleteSpeed: 60,
-		delaySpeed: 2000,
+		delaySpeed: 2000
 	});
 
-	console.log()
+	console.log();
 
 	return (
 		<>
@@ -20,7 +20,7 @@ export const StackTypewriter: React.FC<StackTypewriterProps> = () => {
 				fontFamily={"base"}
 				as={"span"}
 				color={"primary"}
-				fontSize={{base: "2rem", md: "2.5rem"}}
+				fontSize={{ base: "2rem", md: "2.5rem" }}
 				fontWeight={"semibold"}
 			>
 				{typeEffect}
