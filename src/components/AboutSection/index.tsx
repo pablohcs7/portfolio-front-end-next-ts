@@ -6,7 +6,7 @@ interface AboutSectionProps {}
 export const AboutSection: React.FC<AboutSectionProps> = () => {
 	return (
 		<>
-			<Flex mt={{ base: "5rem", md: "7rem" }} flexDir={"column"}>
+			<Flex mt={{ base: "5rem", md: "7rem" }} flexDir={"column"} width={{ base: "100%" }}>
 				<Flex>
 					<Text color={"primary"} fontSize={{ base: "2rem", md: "2.5rem" }}>
 						#

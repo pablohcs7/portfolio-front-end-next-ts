@@ -31,15 +31,15 @@ const projectsInfos: ProjectCardProps[] = [
 		description: "Primeiro site",
 		urlProduction: "https://pablohcs7.github.io/cinexile",
 		urlRepo: "https://github.com/pablohcs7/cinexile"
-	}
+	},
 ];
 
 export const Carousel: React.FC<CarouselProps> = () => {
 	const [selectedIndex, setSelectedIndex] = useState(0);
-	const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+	const [_scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
-	const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-		Autoplay({ stopOnInteraction: false })
+	const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true,  }, [
+		Autoplay({ stopOnInteraction: false }),
 	]);
 
 	const scrollPrev = useCallback(
@@ -76,7 +76,7 @@ export const Carousel: React.FC<CarouselProps> = () => {
 
 	return (
 		<>
-			<Box width={{ base: "16.25rem", md: "35rem", lg: "40rem" }}>
+			<Box width={{ base: "16.25rem", md: "35rem", lg: "40rem", xl: "52rem" }}>
 				<Box className="embla" ref={emblaRef} overflow={"hidden"}>
 					<Box className="embla__container" display={"flex"}>
 						{projectsInfos.map((projectInfo, index) => (
@@ -86,7 +86,7 @@ export const Carousel: React.FC<CarouselProps> = () => {
 								justifyContent={"center"}
 								display={{ base: "block", md: "flex" }}
 								alignItems={"center"}
-								flex={{ base: "0 0 100%", md: "0 0 60%", lg: '0 0 50%' }}
+								flex={{ base: "0 0 100%", md: "0 0 60%", lg: '0 0 50%', xl: "0 0 40%" }}
 								minWidth={"0"}
 								ml={{ base: "1rem", md: "unset" }}
 								mr={{ base: "1rem", md: "unset" }}
@@ -112,7 +112,7 @@ export const Carousel: React.FC<CarouselProps> = () => {
 							</Text>
 						</Box>
 						<Flex gap={"0.5rem"} justifyContent={"center"}>
-							{projectsInfos.map((projectInfo, index) => (
+							{projectsInfos.map((_projectInfo, index) => (
 								<Button
 									key={index}
 									minWidth={"10px"}

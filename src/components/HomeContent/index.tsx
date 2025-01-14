@@ -13,8 +13,10 @@ export const HomeContent: React.FC<HomeContentProps> = () => {
 			<Container maxW={{ base: "60ch", md: "xl", lg: "2xl", xl: "4xl" }}>
 				<Flex flexDir={"column"}>
 					<IntroductionSection />
-					<AboutSection />
-					<StacksSection />
+					<Flex display={{ base: "block", xl: "flex" }} gap={"4rem"}>
+						<AboutSection />
+						<StacksSection />
+					</Flex>
 					<ProjectsSection />
 					<ContactSection />
 				</Flex>
