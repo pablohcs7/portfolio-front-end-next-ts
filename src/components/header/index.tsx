@@ -49,14 +49,14 @@ export const Header: React.FC<HeaderProps> = () => {
 									</ListItem>
 									<ListItem>
 										<MenuHeaderItem
-											optionLink="#projects"
-											optionName="projetos"
+											optionLink="#about"
+											optionName="sobre mim"
 										/>
 									</ListItem>
 									<ListItem>
 										<MenuHeaderItem
-											optionLink="#about"
-											optionName="sobre mim"
+											optionLink="#projects"
+											optionName="projetos"
 										/>
 									</ListItem>
 									<ListItem>

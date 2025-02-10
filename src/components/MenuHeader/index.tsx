@@ -44,13 +44,13 @@ export const MenuHeader: React.FC<HeaderMenuProps> = () => {
 									<MenuHeaderItem optionLink="#home" optionName="home" />
 								</ListItem>
 								<ListItem onClick={() => onClose()}>
+									<MenuHeaderItem optionLink="#about" optionName="sobre mim" />
+								</ListItem>
+								<ListItem onClick={() => onClose()}>
 									<MenuHeaderItem
 										optionLink="#projects"
 										optionName="projetos"
 									/>
-								</ListItem>
-								<ListItem onClick={() => onClose()}>
-									<MenuHeaderItem optionLink="#about" optionName="sobre mim" />
 								</ListItem>
 								<ListItem onClick={() => onClose()}>
 									<MenuHeaderItem
