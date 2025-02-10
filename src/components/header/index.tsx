@@ -1,12 +1,24 @@
-import { Flex, Text, Image, Container } from "@chakra-ui/react";
+import {
+	Flex,
+	Text,
+	Image,
+	Container,
+	useMediaQuery,
+	Box,
+	List,
+	ListItem
+} from "@chakra-ui/react";
 import { MenuHeader } from "../MenuHeader";
+import { MenuHeaderItem } from "../MenuHeaderItem";
 
 interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = () => {
+	const [isDesktop] = useMediaQuery("(min-width: 1280px)");
+
 	return (
 		<>
-			<Container maxW={{ lg: "2xl", xl: "4xl" }}>
+			<Container maxW={{ lg: "2xl", xl: "4xl", xxl: "6xl" }}>
 				<Flex
 					align={"center"}
 					justify={"space-between"}
@@ -28,7 +40,37 @@ export const Header: React.FC<HeaderProps> = () => {
 							Pablo
 						</Text>
 					</Flex>
-					<MenuHeader />
+					{isDesktop ? (
+						<Flex>
+							<List>
+								<Flex flexDir={"row"} gap={"2rem"}>
+									<ListItem>
+										<MenuHeaderItem optionLink="#home" optionName="home" />
+									</ListItem>
+									<ListItem>
+										<MenuHeaderItem
+											optionLink="#projects"
+											optionName="projetos"
+										/>
+									</ListItem>
+									<ListItem>
+										<MenuHeaderItem
+											optionLink="#about"
+											optionName="sobre mim"
+										/>
+									</ListItem>
+									<ListItem>
+										<MenuHeaderItem
+											optionLink="#contacts"
+											optionName="contatos"
+										/>
+									</ListItem>
+								</Flex>
+							</List>
+						</Flex>
+					) : (
+						<MenuHeader />
+					)}
 				</Flex>
 			</Container>
 		</>

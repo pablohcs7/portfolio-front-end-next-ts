@@ -8,7 +8,7 @@ interface ProjectsSectionProps {}
 export const ProjectsSection: React.FC<ProjectsSectionProps> = () => {
 	return (
 		<>
-			<Flex flexDir={"column"} alignItems={"center"}>
+			<Flex id={"projects"} flexDir={"column"} alignItems={"center"}>
 				<Flex w={"100%"} alignItems={"center"} justifyContent={"space-between"}>
 					<Flex mt={{ base: "5rem", md: "7rem" }}>
 						<Text color={"primary"} fontSize={{ base: "2rem", md: "2.5rem" }}>

@@ -9,6 +9,7 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = () => {
 	return (
 		<>
 			<Flex
+				id={"home"}
 				display={{ base: "block", xl: "flex" }}
 				alignItems={{ xl: "center" }}
 				justifyContent={"space-between"}

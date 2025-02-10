@@ -1,4 +1,4 @@
-import { Flex, Link as ChakraLink, ListItem, Text } from "@chakra-ui/react";
+import { Flex, Link as ChakraLink, ListItem, Text, useMediaQuery } from "@chakra-ui/react";
 import Link from "next/link";
 
 interface MenuHeaderItemProps {
@@ -12,10 +12,12 @@ export const MenuHeaderItem: React.FC<MenuHeaderItemProps> = ({
 	optionLink,
 	customColor
 }) => {
+	const [isDesktop] = useMediaQuery("(min-width: 1280px)");
+
 	return (
 		<>
 				<Flex>
-					<Text color={"primary"} fontSize={"2rem"}>
+					<Text color={"primary"} fontSize={isDesktop ? "1.5rem" : "2rem"}>
 						#
 					</Text>
 					<ChakraLink
@@ -24,7 +26,7 @@ export const MenuHeaderItem: React.FC<MenuHeaderItemProps> = ({
 						_hover={{ textDecor: "none" }}
 					>
 						<Text
-							fontSize={"2rem"}
+							fontSize={isDesktop ? "1.5rem" : "2rem"}
 							color={customColor ? customColor : 'secondary'}
 							_hover={{ color: 'white', transition: "0.5s" }}
 						>

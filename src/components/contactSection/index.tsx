@@ -14,7 +14,7 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
 
 	return (
 		<>
-			<Flex flexDirection={"column"} mt={"5rem"}>
+			<Flex id={"contacts"} flexDirection={"column"} mt={"5rem"}>
 				<Flex>
 					<Text color={"primary"} fontSize={{ base: "2rem", md: "2.5rem" }}>
 						#
@@ -28,8 +28,10 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
 					</Text>
 				</Flex>
 				<Text mt={"2rem"} fontSize={{ base: "1rem", md: "1.2rem" }}>
-					Estou em busca de oportunidades full time. Mas, se tiver alguma
-					proposta ou dúvida, sinta-se à vontade para entrar em contato comigo.
+					Aberto a conversas sobre tecnologia, projetos interessantes e
+					oportunidades futuras. Seja para discutir uma ideia, iniciar uma
+					colaboração ou simplesmente trocar experiências, o contato está sempre
+					disponível.
 				</Text>
 				<Flex
 					mt={"2rem"}

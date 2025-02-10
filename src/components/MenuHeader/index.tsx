@@ -33,28 +33,28 @@ export const MenuHeader: React.FC<HeaderMenuProps> = () => {
 				}
 			/>
 
-			<Modal isOpen={isOpen} onClose={onClose} size={"full"}>
+			<Modal isOpen={isOpen} onClose={onClose} size={"full"} returnFocusOnClose={false}>
 				<ModalOverlay />
 				<ModalContent backgroundColor={"customBackground"}>
 					<HeaderModal closeMenu={onClose} />
 					<ModalBody mt={"3rem"}>
 						<List>
 							<Flex flexDir={"column"} gap={"2rem"}>
-								<ListItem>
-									<MenuHeaderItem optionLink="/" optionName="home" />
+								<ListItem onClick={() => onClose()}>
+									<MenuHeaderItem optionLink="#home" optionName="home" />
 								</ListItem>
-								<ListItem>
+								<ListItem onClick={() => onClose()}>
 									<MenuHeaderItem
-										optionLink="/projects"
+										optionLink="#projects"
 										optionName="projetos"
 									/>
 								</ListItem>
-								<ListItem>
-									<MenuHeaderItem optionLink="/about" optionName="sobre mim" />
+								<ListItem onClick={() => onClose()}>
+									<MenuHeaderItem optionLink="#about" optionName="sobre mim" />
 								</ListItem>
-								<ListItem>
+								<ListItem onClick={() => onClose()}>
 									<MenuHeaderItem
-										optionLink="/contacts"
+										optionLink="#contacts"
 										optionName="contatos"
 									/>
 								</ListItem>

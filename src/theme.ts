@@ -58,7 +58,7 @@ export const theme = extendTheme({
 		md: "48rem",
 		lg: "64rem",
 		xl: "80rem",
-		"2xl": "90rem"
+		xxl: "90rem"
 	},
 	borderRadius: {
 		radii: {
