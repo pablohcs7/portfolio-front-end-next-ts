@@ -14,7 +14,7 @@ export const metadata = {
       {
         url: "https://uhoq2a96iqqjrshy.public.blob.vercel-storage.com/logo_white-xZ5GSQLKdsN78VVY0U7wH7pd5BbUde.png",
         width: 1200,
-        height: 630,
+        height: 1200,
         alt: "Logo do meu portfólio",
       },
     ],
