@@ -73,12 +73,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 						<Flex gap={"0.875rem"} width={"100%"}>
 							<CardButton
 								buttonText="Ver site"
-								iconSrc="/icons/play.svg"
+								iconSrc="/icons/Play.svg"
 								url={urlProduction}
 							/>
 							<CardButton
 								buttonText="Repo"
-								iconSrc="/icons/github.svg"
+								iconSrc="/icons/Github.svg"
 								url={urlRepo}
 							/>
 						</Flex>
