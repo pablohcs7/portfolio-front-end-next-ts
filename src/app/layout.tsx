@@ -12,7 +12,7 @@ export const metadata = {
     siteName: "Portfólio Pablo",
     images: [
       {
-        url: "https://uhoq2a96iqqjrshy.public.blob.vercel-storage.com/logo_white-xZ5GSQLKdsN78VVY0U7wH7pd5BbUde.png",
+        url: "https://uhoq2a96iqqjrshy.public.blob.vercel-storage.com/logo_dark-4e0zDlA9xTQ7fEGDoptd1YudMWrfQd.jpg",
         width: 1200,
         height: 1200,
         alt: "Logo do meu portfólio",
@@ -24,7 +24,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Portfólio Pablo",
     description: "Confira meu portfólio para saber um pouco mais sobre mim e meus projetos!",
-    images: ["https://uhoq2a96iqqjrshy.public.blob.vercel-storage.com/logo_white-xZ5GSQLKdsN78VVY0U7wH7pd5BbUde.png"],
+    images: ["https://uhoq2a96iqqjrshy.public.blob.vercel-storage.com/logo_dark-4e0zDlA9xTQ7fEGDoptd1YudMWrfQd.jpg"],
   },
 };
 
